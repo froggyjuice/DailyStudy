@@ -4,7 +4,7 @@ student_scores = {
     "Emily": 92,
     "Michael": 76,
     "Sarah": 89,
-    "David": 95
+    "David": 95,
 }
 
 # 2. 각 학생의 이름과 점수를 출력
@@ -22,38 +22,15 @@ for student, score in student_scores.items():
     if score >= average_score:
         print(student)
 
-#----------#
-
-# 학생들의 이름과 점수를 저장하는 딕셔너리
-student_scores = {
-    "John": 85,
-    "Emily": 92,
-    "Michael": 76,
-    "Sarah": 89,
-    "David": 95
-}
-
-# 평균 점수를 계산
-average_score = sum(student_scores.values()) / len(student_scores)
-
-# 1. 축약된 반복문으로 평균 점수 이상을 받은 학생의 이름 출력
-print("축약된 반복문:")
+# 5. 축약된 반복문으로 평균 점수 이상을 받은 학생의 이름 출력
+print("\n축약된 반복문:")
 for student, score in student_scores.items():
     if score >= average_score:
         print(student)
 
-# 2. 리스트 내포를 사용해 평균 점수 이상을 받은 학생들의 이름 리스트 생성
+# 6. 리스트 내포를 사용해 평균 점수 이상을 받은 학생들의 이름 리스트 생성
 print("\n리스트 내포:")
-students_above_average = [student for student, score in student_scores.items() if score >= average_score]
+students_above_average = [
+    student for student, score in student_scores.items() if score >= average_score
+]
 print(students_above_average)
-
-#실행결과
-
-축약된 반복문:
-Emily
-Sarah
-David
-
-리스트 내포:
-['Emily', 'Sarah', 'David']
-
