@@ -51,3 +51,11 @@ print(result)
 user_info = ["Name: John", "Age: 30", "Location: New York"]
 result = " | ".join(user_info)
 print(result)  # 출력: "Name: John | Age: 30 | Location: New York"
+
+# 모듈러 연산
+A, B, C = map(int, input().split())
+print((A + B) % C)
+print(((A%C) + (B%C))%C)
+print((A*B)%C)
+print(((A%C) * (B%C))%C)
+
