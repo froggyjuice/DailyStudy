@@ -61,5 +61,15 @@ def main():
     add_five = outer_function(5)
     print(add_five(3))    # 출력: 8
 
+a = 10
+b = [1, 2, 3, 4]
+
+def function():
+    a = 20
+    b.extend([5, 6, 7, 8])
+    print(a)
+    print(b)
+function()
+
 if __name__ == "__main__":
     main()
