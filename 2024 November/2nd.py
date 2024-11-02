@@ -87,3 +87,22 @@ print("할인 적용 후:", 할인율, 장바구니)
 상품추가(할인율, 장바구니)
 print("상품 추가 후:", 할인율, 장바구니)
 
+# 퀴즈 2: 학생 성적 관리
+점수 = 80
+성적이력 = [85, 90]
+
+def 성적수정(score, history):
+    score += 5
+    history = [95, 100]
+    print(f"함수 내부 - 점수: {score}, 이력: {history}")
+
+def 성적추가(score, history):
+    score += 10
+    history += [score]
+    print(f"함수 내부 - 점수: {score}, 이력: {history}")
+
+print("\n처음:", 점수, 성적이력)
+성적수정(점수, 성적이력)
+print("성적 수정 후:", 점수, 성적이력)
+성적추가(점수, 성적이력)
+print("성적 추가 후:", 점수, 성적이력)
