@@ -130,3 +130,29 @@ print("원본값:", 체력, 아이템목록)
 print("아이템 획득 후:")
 print("반환값:", 새체력, 새아이템)
 print("원본값:", 체력, 아이템목록)
+
+# 퀴즈 4: 도서관 책 관리
+책번호 = 1001
+대출목록 = ['파이썬 기초', '자바 기초']
+
+def 도서반납(book_id, books):
+    book_id = 1002
+    books.clear()
+    books.append('C++ 기초')
+    return book_id
+
+def 도서대출(book_id, books):
+    book_id = 1003
+    temp_books = books.copy()  # 리스트 복사
+    temp_books.append('자바스크립트 기초')
+    return temp_books
+
+print("\n처음:", 책번호, 대출목록)
+새책번호 = 도서반납(책번호, 대출목록)
+print("도서 반납 후:")
+print("반환된 책번호:", 새책번호)
+print("현재 상태:", 책번호, 대출목록)
+새대출목록 = 도서대출(책번호, 대출목록)
+print("도서 대출 후:")
+print("반환된 대출목록:", 새대출목록)
+print("현재 상태:", 책번호, 대출목록)
