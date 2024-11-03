@@ -74,3 +74,26 @@ with open("data.txt", "w") as file:
         first_name = random.choice(hanguls) + random.choice(hanguls)
         last_name = random.choice(family_name_list)
         name = last_name + first_name
+
+# 파일 접근 권한 문제가 중요하기 때문에 One drive 등 클라우드 기반 드라이브의 파일을 읽고 쓰는 것은 복잡하다.. C 드라이브에서 연습하자
+
+import os
+
+print(os.getcwd())
+
+# getwd()가 아니고 getcwd()였다.
+
+file_read = open("data.txt", "r")
+
+for line in file_read:
+    name, height, weight = map(str.strip, line.strip().split(","))
+    if not weight.isdigit():
+        continue
+    weight = int(weight)
+    height = int(height)
+    bmi = weight / (height / 100) ** 2
+    print(name, weight, height, bmi)
+    
+file_read.close()
+
+# map함수... line.strip().split()만 하면 name, weight, height 옆에 있는 공백까지 다 지울 수 없어서 map(str.strip(), ~) 을 써야 한다. 
