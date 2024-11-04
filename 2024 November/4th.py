@@ -61,3 +61,20 @@ import time
 print(그래프(전체사람수, 0))
 실행이후시간 = time.time()
 print(실행이후시간 - 실행이전시간)
+
+headcount = 100
+memo = {}
+
+def graph(node, arrow_num):
+    count = 0
+    if (node, arrow_num) in memo:
+        return memo[(node, arrow_num)]
+    for i in range(max(2, arrow_num), min(node, 10) + 1):
+        count += graph(node - i, i)
+    if node == 0:
+        count += 1
+    memo[((node, arrow_num))] = count
+    return count
+
+print(graph(headcount, 0))
+    
