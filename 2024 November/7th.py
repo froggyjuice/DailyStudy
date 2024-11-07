@@ -23,3 +23,17 @@ user_input = input("Enter a word or phrase to reverse: ")
 
 # 뒤집힌 문자열을 출력합니다.
 print("Reversed string:", reverse_string(user_input))
+
+def reverse_sublist(lst, i, j):
+    # 주어진 구간을 슬라이싱하고 뒤집어서 리스트에 다시 할당합니다.
+    lst[i:j+1] = lst[i:j+1][::-1]
+    return lst
+
+# 테스트를 위해 리스트와 구간을 지정합니다.
+sample_list = [1, 2, 3, 4, 5, 6, 7]
+i, j = 2, 5  # 2번 인덱스부터 5번 인덱스까지 뒤집기
+
+# 결과 출력
+print("Original list:", sample_list)
+print("Modified list:", reverse_sublist(sample_list, i, j))
+
