@@ -33,7 +33,25 @@ if len(myinput) == N:
 else:
     pass
 
+for i in range(32, 127):
+    print(f"{i}: {chr(i)}")
+
+# 문자열
+
+mynum = int(input())
+    
+
+for _ in range(mynum):
+    str = input()
+    print(str[0] + str[len(str)-1])
+
+
 print(output)
 
 print(ord(input()))
 
+# 단어 길이 재기
+
+mystring = input()
+
+print(len(mystring))
