@@ -9,3 +9,5 @@ cols = np.array([1, 0, 2])  # 열 인덱스
 
 result = data[rows, cols]
 print(result)
+
+
